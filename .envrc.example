@@ -1,0 +1,14 @@
+if [ ! -e .venv ]; then
+    echo "Venv not found. create it first with 'uv venv'."
+    echo "Then run again 'direnv allow'"
+    exit 0
+fi
+
+if [ -e .env ]; then
+  dotenv
+fi
+export PYTHONPATH="$PYTHONPATH:./src"
+
+. .venv/bin/activate
+
+unset PS1

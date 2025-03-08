@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% for post in posts %}
+        <section>
+            <h1>{{ post.author }} wrote at {{ post.at }}</h1>
+            <div>
+                {{ post.content }}
+            </div>
+        </section>
+    {% endfor %}
+</body>
+</html>

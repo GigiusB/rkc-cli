@@ -1,4 +1,4 @@
-# KT Odoo UI Test
+# RKC Cli
 
 ## Setup
 
@@ -14,4 +14,12 @@
 ```shell
 mkdocs build
 mkdocs serve
+```
+
+# Usage
+
+Login & capture
+
+```shell
+rkc-cli login && rkc-cli read-forum -S "»" https://campus.college.ch/forum/posts/105396-unit-2-theorising-leadership 1
 ```

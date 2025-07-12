@@ -76,5 +76,6 @@ def read_forum(pages: int, strip: str, url: str):
         posts.extend(read_posts(container))
 
     rendered = render(posts, title)
+    Path(out).parent.mkdir(parents=True, exist_ok=True)
     Path(out).write_text(rendered, encoding="utf-8")
     click.secho(f'Saved to {out}', fg="green")

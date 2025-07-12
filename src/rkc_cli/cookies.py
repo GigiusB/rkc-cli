@@ -13,7 +13,7 @@ class Cookies:
 
     def load(self, driver: "WebDriver"):
         if not self.storage.exists():
-            raise FileNotFoundError(f"Cookies file not found: {self.storage}")
+            raise FileNotFoundError(f"Cookies file not found: {self.storage}. Run 'rkc-cli login' first")
         cookies = json.loads(self.storage.read_text())
         for cookie in cookies:
             driver.add_cookie(cookie)

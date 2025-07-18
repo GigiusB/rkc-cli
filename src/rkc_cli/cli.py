@@ -1,8 +1,8 @@
-import os
 from .cookies import Cookies
 
 from .main import main  # noqa: F401, F403
 from .forum import *  # noqa: F401, F403
+from .fs import *  # noqa: F401, F403
 
 
 @main.command()
